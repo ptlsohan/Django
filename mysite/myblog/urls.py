@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
 
+
 app_name = 'myblog'
 urlpatterns = [
     url(r'^list/$',views.PostListView.as_view(),name="post_list"),

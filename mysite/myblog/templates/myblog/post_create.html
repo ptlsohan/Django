@@ -1,8 +1,14 @@
 {% extends 'myblog/base_html.html' %}
 {% block body_block %}
-<form method="POST">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" name="" value="Register">
-</form>
+<div class="jumbotron">
+  <div class="container">
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" name="" value="Register">
+    </form>
+  </div>
+
+</div>
+
 {% endblock %}

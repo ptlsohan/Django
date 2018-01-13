@@ -10,7 +10,7 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-
+    image = models.ImageField(blank=True,default='1.jpg')
     def publish(self,user):
         usr = User
         self.author = user

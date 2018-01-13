@@ -12,7 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 class index(TemplateView):
-    template_name='myblog/base.html'
+    template_name='myblog/index.html'
 
 class PostDetailView(DetailView):
     model = Post

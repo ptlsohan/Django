@@ -33,6 +33,7 @@
             <a >Welcome: {{ user.username }}</a>
           </li>
             {% else %}
+            <li><a href="{% url 'myblog:user_register'%}">Register</a></li>
             <li><a class='nav navbar-right' href="{% url 'myblog:user_login' %}" ><span class="glyphicon glyphicon-user"></span></a></li>
           {% endif %}
 
