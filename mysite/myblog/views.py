@@ -44,7 +44,8 @@ class DraftListView(LoginRequiredMixin,ListView):
 @login_required
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    post.publish()
+    user = request.user.get_username()
+    post.publish(user)
     return redirect('myblog:post_detail', pk=pk)
 
 def user_register(request):
